@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-08-14 20:28:29
+ * @LastEditTime: 2019-08-14 20:58:26
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -23,23 +23,38 @@ function wordToHtml () {
     var str2 = arr1[0]
     var str3 = str2
       .replace(/style='[\S\s\f\n\r]*?'/igm, '')
-      .replace(/&nbsp;/igm, '')
-      .replace(/class=\w+/igm, '')
-      .replace(/align=\w+/igm, '')
-      .replace(/datetime="[\s\S]*?"/igm, '')
-      .replace(/cite=".*?"/igm, '')
-      .replace(/width=\d+/igm, '')
-      .replace(/height=\d+/igm, '')
-      // .replace(/<del[\S\s\f\n\r]*?del>/igm, '')
-      // .replace(/<\/?\bins\b[\S\s\f\n\r]*?>/igm, '')
-      // .replace(/<\/?\bspan\b[\S\s\f\n\r]*?>/igm, '')
-      // .replace(/<\/?\ba\b[\S\s\f\n\r]*?>/igm, '')
-      // .replace(/<\/?\bu\b>/igm, '')
-      .replace(/lang=\S+/igm, '')
-      .replace(/[\f\n\r\s]+/igm, ' ')
+
+    // 要素滤除
+    var reg = [
+      /&nbsp;/igm,
+      /class=\w+/igm,
+      /align=\w+/igm,
+      /datetime="[\s\S]*?"/igm,
+      /cite=".*?"/igm,
+      /width=\d+/igm,
+      /width="\d+%"/igm,
+      /height=\d+/igm,
+      /lang=\w*-?\w*/igm,
+      /[\f\n\r\s]/igm
+    ]
+
+    reg.forEach((x) => {
+      str3 = str3.replace(x, ' ')
+    })
+
+    //无效标签滤除
+    var reg2 = [
+      /<\/?span\s*>/igm,
+      /<b\s*>\s*<\/b>/igm,
+      /<p\s*>\s*<\/p>/igm,
+      /<p\s*>\s*\d*\.*\s*<\/p>/igm
+    ]
+    reg2.forEach((x) => {
+      str3 = str3.replace(x, ' ')
+    })
 
 
-    // console.log(str3)
+
     var str4 = `
 <!DOCTYPE html>
 <html>
