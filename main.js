@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-06-14 10:50:28
+ * @LastEditTime: 2019-08-14 20:28:29
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -21,7 +21,8 @@ function wordToHtml () {
   // console.log(arr1)
   if (arr1) {
     var str2 = arr1[0]
-    var str3 = str2.replace(/style='[\S\s\f\n\r]*?'/igm, '')
+    var str3 = str2
+      .replace(/style='[\S\s\f\n\r]*?'/igm, '')
       .replace(/&nbsp;/igm, '')
       .replace(/class=\w+/igm, '')
       .replace(/align=\w+/igm, '')
@@ -29,11 +30,11 @@ function wordToHtml () {
       .replace(/cite=".*?"/igm, '')
       .replace(/width=\d+/igm, '')
       .replace(/height=\d+/igm, '')
-      .replace(/<del[\S\s\f\n\r]*?del>/igm, '')
-      .replace(/<\/?ins>/igm, '')
-      .replace(/<\/?span[\S\s\f\n\r]*?>/igm, '')
-      .replace(/<\/?a[\S\s\f\n\r]*?>/igm, '')
-      .replace(/<\/?u>/igm, '')
+      // .replace(/<del[\S\s\f\n\r]*?del>/igm, '')
+      // .replace(/<\/?\bins\b[\S\s\f\n\r]*?>/igm, '')
+      // .replace(/<\/?\bspan\b[\S\s\f\n\r]*?>/igm, '')
+      // .replace(/<\/?\ba\b[\S\s\f\n\r]*?>/igm, '')
+      // .replace(/<\/?\bu\b>/igm, '')
       .replace(/lang=\S+/igm, '')
       .replace(/[\f\n\r\s]+/igm, ' ')
 
@@ -45,7 +46,7 @@ function wordToHtml () {
 
 <head lang="en">
 <meta charset="UTF-8" />
-<title>借款成功小贴士</title>
+<title>协议</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -54,9 +55,13 @@ function wordToHtml () {
 <meta name="x5-orientation" content="landscape" />
 <meta name="screen-orientation" content="landscape" /> 
 <!-- @@include('../../template/shence.html') -->
+<!-- <link rel="stylesheet" href="../../asset/css/main.css" /> -->
 <link rel="stylesheet" href="https://api-m.haohuan.com/public/asset/css/main.css" />
 </head>
+<span class="" data-title=""></span>
 ${str3}
+<!-- <script src="../../asset/lib/jquery/jquery.min.js"></script> -->
+<!-- <script src="../../asset/js/protocol/creditQuery.js"></script> -->
 </html>
 `
     $('#zhh').val(str4)
