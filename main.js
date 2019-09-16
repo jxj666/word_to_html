@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-08-14 20:58:26
+ * @LastEditTime: 2019-09-16 19:24:04
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -73,7 +73,7 @@ function wordToHtml () {
 <!-- <link rel="stylesheet" href="../../asset/css/main.css" /> -->
 <link rel="stylesheet" href="https://api-m.haohuan.com/public/asset/css/main.css" />
 </head>
-<span class="" data-title=""></span>
+<!-- <span class="" data-title=""></span> -->
 ${str3}
 <!-- <script src="../../asset/lib/jquery/jquery.min.js"></script> -->
 <!-- <script src="../../asset/js/protocol/creditQuery.js"></script> -->
