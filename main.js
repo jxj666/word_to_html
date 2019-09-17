@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-09-17 14:47:13
+ * @LastEditTime: 2019-09-17 14:52:52
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -45,7 +45,7 @@ function wordToHtml () {
     //无效标签滤除
     var reg2 = [
       /<\/?span\s*>/igm,
-      /<del\s*>.*<\/del>/igm,
+      /<del.*?>.*?<\/del>/igm,
       /<\/?ins.*?>/igm,
       /<b\s*>\s*<\/b>/igm,
       /<p\s*>\s*<\/p>/igm,
