@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-09-17 14:52:52
+ * @LastEditTime: 2019-10-09 15:28:41
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -28,6 +28,7 @@ function wordToHtml () {
     var reg = [
       /&nbsp;/igm,
       /class=\w+/igm,
+      /valign=\w+/igm,
       /align=\w+/igm,
       /datetime="[\s\S]*?"/igm,
       /cite=".*?"/igm,
