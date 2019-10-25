@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-10-21 12:01:34
+ * @LastEditTime: 2019-10-25 11:49:34
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -79,6 +79,9 @@ function wordToHtml () {
 <!-- <span class="testRed" data-title=""></span> -->
 ${str3}
 <!-- <script src="../../asset/lib/jquery/jquery.min.js"></script> -->
+<!-- <script src="../../asset/js/protocol/creditQuery.js"></script> -->
+<!-- <script src="../../asset/js/protocol/creditManagement.js"></script> -->
+<!-- <script src="../../asset/js/protocol/loan.js"></script> -->
 </html>
 `
     $('#zhh').val(str4)
