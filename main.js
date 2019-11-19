@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-11-19 18:56:16
+ * @LastEditTime: 2019-11-19 19:10:42
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -77,7 +77,7 @@ function wordToHtml () {
 ${str3}
 <!-- <script src="../../asset/lib/jquery/jquery.min.js"></script> -->
 <!-- <script src="../../asset/js/protocol/**.js"></script> -->
->
+
 </html>
 `
     $('#zhh').val(str4)
