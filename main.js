@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-10-25 11:49:34
+ * @LastEditTime: 2019-11-19 17:45:33
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -50,14 +50,12 @@ function wordToHtml () {
       /<\/?ins.*?>/igm,
       /<b\s*>\s*<\/b>/igm,
       /<p\s*>\s*<\/p>/igm,
-      /<p\s*>\s*\d*\.*\s*<\/p>/igm
+      /<p\s*>\s*\d*\.*\s*<\/p>/igm,
     ]
     reg2.forEach((x) => {
       str3 = str3.replace(x, ' ')
     })
-
-
-
+    str3 = str3.replace(/<body.*?>/, `<body id='tem'>`)
     var str4 = `
 <!DOCTYPE html>
 <html>
@@ -76,12 +74,10 @@ function wordToHtml () {
 <!-- <link rel="stylesheet" href="../../asset/css/main.css" /> -->
 <link rel="stylesheet" href="https://api-m.haohuan.com/public/asset/css/main.css" />
 </head>
-<!-- <span class="testRed" data-title=""></span> -->
 ${str3}
 <!-- <script src="../../asset/lib/jquery/jquery.min.js"></script> -->
-<!-- <script src="../../asset/js/protocol/creditQuery.js"></script> -->
-<!-- <script src="../../asset/js/protocol/creditManagement.js"></script> -->
-<!-- <script src="../../asset/js/protocol/loan.js"></script> -->
+<!-- <script src="../../asset/js/protocol/**.js"></script> -->
+>
 </html>
 `
     $('#zhh').val(str4)
