@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-11-19 17:45:33
+ * @LastEditTime: 2019-11-19 18:56:16
  * @LastEditors: 靳肖健
  */
 $(document).ready(
@@ -55,7 +55,7 @@ function wordToHtml () {
     reg2.forEach((x) => {
       str3 = str3.replace(x, ' ')
     })
-    str3 = str3.replace(/<body.*?>/, `<body id='tem'>`)
+    str3 = str3.replace(/<body.*?>([\s\S\f\n\r]*?)<\/body.*?>/, `<body><div id='tem'>$1</div></body>`)
     var str4 = `
 <!DOCTYPE html>
 <html>
