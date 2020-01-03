@@ -3,8 +3,8 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime: 2019-11-19 19:10:42
- * @LastEditors: 靳肖健
+ * @LastEditTime : 2020-01-03 17:13:43
+ * @LastEditors  : 靳肖健
  */
 $(document).ready(
   () => {
@@ -54,6 +54,21 @@ function wordToHtml () {
     ]
     reg2.forEach((x) => {
       str3 = str3.replace(x, ' ')
+    })
+
+    //标签精简
+    var reg2 = [
+      {
+        input: /> </igm,
+        export: '><'
+      },
+      {
+        input: /([\u4e00-\u9fa5]) ([\u4e00-\u9fa5])/igm,
+        export: '$1$2'
+      }
+    ]
+    reg2.forEach((x) => {
+      str3 = str3.replace(x.input, x.export)
     })
     str3 = str3.replace(/<body.*?>([\s\S\f\n\r]*?)<\/body.*?>/, `<body><div id='tem'>$1</div></body>`)
     var str4 = `
