@@ -3,7 +3,7 @@
  * @Author: jinxiaojian
  * @Email: jinxiaojian@youxin.com
  * @Date: 2019-06-14 10:35:47
- * @LastEditTime : 2020-01-03 17:13:43
+ * @LastEditTime : 2020-01-03 17:17:03
  * @LastEditors  : 靳肖健
  */
 $(document).ready(
@@ -59,11 +59,11 @@ function wordToHtml () {
     //标签精简
     var reg2 = [
       {
-        input: /> </igm,
+        input: />\s*</igm,
         export: '><'
       },
       {
-        input: /([\u4e00-\u9fa5]) ([\u4e00-\u9fa5])/igm,
+        input: /([\u4e00-\u9fa5])\s*([\u4e00-\u9fa5])/igm,
         export: '$1$2'
       }
     ]
